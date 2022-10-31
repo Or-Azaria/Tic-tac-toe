@@ -9,4 +9,10 @@ cellElements.forEach((cell) => {
 
 function handleClick(e) {
   const cell = e.target;
+  const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
+  placeMark(cell, currentClass);
+}
+
+function placeMark(cell, currentClass) {
+  cell.classList.add(currentClass);
 }
